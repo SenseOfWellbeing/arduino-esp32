@@ -3,8 +3,8 @@
 
 namespace SerialCom
 {
-    constexpr static const uint8_t PIN_UART_RX = 16; // GPIO16 = U2_RXD (ESP32)
-    constexpr static const uint8_t PIN_UART_TX = 17; // UNUSED
+    constexpr static const uint8_t PIN_UART_RX = 40; // GPIO16 = U2_RXD (ESP32) // RX2 to RX
+    constexpr static const uint8_t PIN_UART_TX = 41; // UNUSED 
 
     SoftwareSerial sensorSerial(PIN_UART_RX, PIN_UART_TX);
 
