@@ -6,3 +6,4 @@ https://elektro.turanis.de/html/prj405/index.html
 
 
 our choice of ESP32: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/hw-reference/esp32/get-started-devkitc.html 
+![image](https://user-images.githubusercontent.com/101325292/160104759-2bcfd4cb-1c12-4d6d-9d51-edae587e7e38.png)
