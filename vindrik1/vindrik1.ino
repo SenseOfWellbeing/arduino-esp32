@@ -7,7 +7,8 @@
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
+#include "SH1106Wire.h"
+//#include <Adafruit_SSD1306Wire.h>
 #include "SerialCom.h"
 
 #define SCREEN_WIDTH 128
