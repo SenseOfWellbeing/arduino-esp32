@@ -2,7 +2,7 @@ import random
 import time
 import paho.mqtt.client as mqtt_client
 
-broker = "172.17.104.141"
+broker = "172.17.243.87"
 port = 1883
 topic = 'strings'
 # generate client ID with pub prefix randomly
