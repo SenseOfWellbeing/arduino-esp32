@@ -1,0 +1,5 @@
+OpenHub install:
+https://www.openhab.org/download/
+"Server" for MQTT actions will be running on a Ubuntu PC
+
+Java https://www.azul.com/downloads/zulu-community/?version=java-11-lts&package=jdk installieren

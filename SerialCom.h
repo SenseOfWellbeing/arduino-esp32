@@ -105,8 +105,4 @@ namespace SerialCom
             clearRxBuf();
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main
