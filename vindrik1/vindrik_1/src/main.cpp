@@ -23,22 +23,24 @@ SensorState state;
 long nextReport = 0;
 
 void setup() {
+  pinMode(13,INPUT);
   Serial.begin(115200);
+  
   SerialCom::setup();
   nextReport = lmillis() + REPORT_DELAY * 1000;
 }
 
 void loop() {
   SerialCom::handleUart(state);
-  // if(lmillis() - nextReport >= 0){
-      // nextReport = lmillis() + REPORT_DELAY; //* 1000;
+  if(lmillis() - nextReport >= 0){
+      nextReport = lmillis() + REPORT_DELAY; //* 1000;
         delay(1000);
-      // if(state.valid){
-        Serial.println("Wert: " + state.avgPM25);
-      // }
-      // else{
-        // Serial.println("---");
-        // Serial.println(nextReport + " " + lmillis());
-      // }
-  // }
+      if(state.valid){
+        Serial.println(state.avgPM25);
+      }
+      else{
+        Serial.println("---");
+        Serial.println(nextReport + " " + lmillis());
+      }
+  }
 }

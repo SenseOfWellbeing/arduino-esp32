@@ -2,23 +2,21 @@
 
 #include <SSD1306.h>
 // #include <splash.h>
-
-
 #include <SoftwareSerial.h>
 #include "Types.h"
 
 namespace SerialCom {
-    constexpr static const uint8_t PIN_UART_RX = GPIO_PIN_REG_3; // GPIO 3
-    constexpr static const uint8_t PIN_UART_TX = GPIO_PIN_REG_1; // UNUSED
+    // constexpr static const uint8_t PIN_UART_RX = 40; // GPIO 3
+    constexpr static const uint8_t PIN_UART_RX = 13;
+    constexpr static const uint8_t PIN_UART_TX = 15; // UNUSED
 
     uint8_t serialRxBuf[255];
     uint8_t rxBufIdx = 0;
 
     void setup() {
         pinMode(PIN_UART_RX, INPUT);
-        pinMode(PIN_UART_TX, INPUT);
-        Serial2.begin(115200, SERIAL_8N1, PIN_UART_RX, PIN_UART_TX);
-        // Serial2.begin(115200, SERIAL_8N1,)
+        pinMode(PIN_UART_TX, OUTPUT);
+        Serial2.begin(9600, SERIAL_8N1, PIN_UART_RX, PIN_UART_TX);
     }
 
     void clearRxBuf() {
@@ -32,7 +30,7 @@ namespace SerialCom {
 
         state.measurements[state.measurementIdx] = pm25;
         state.measurementIdx = (state.measurementIdx + 1) % 5;
-
+        Serial.println(state.measurements[0] + " measurement 0");
         if (state.measurementIdx == 0) {
             float avgPM25 = 0.0f;
             for (uint8_t i = 0; i < 5; ++i) {
@@ -63,18 +61,17 @@ namespace SerialCom {
         }
         while (Serial2.available()) {
             serialRxBuf[rxBufIdx++] = Serial2.read();
-            // Without this delay, receiving data breaks for reasons that are beyond me
+            // Serial.println(serialRxBuf[rxBufIdx]);
             delay(15);
-
             if (rxBufIdx >= 64) {
                 clearRxBuf();
             }
         }
         if (isValidHeader() && isValidChecksum()) {
             parseState(state);
-        }    
+        }
         else {
             clearRxBuf();
         }
     }
-} 
+}
