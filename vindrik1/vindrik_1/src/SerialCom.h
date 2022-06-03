@@ -6,7 +6,6 @@
 #include "Types.h"
 
 namespace SerialCom {
-    // constexpr static const uint8_t PIN_UART_RX = 40; // GPIO 3
     constexpr static const uint8_t PIN_UART_RX = 13;
     constexpr static const uint8_t PIN_UART_TX = 15; // UNUSED
 
@@ -30,7 +29,6 @@ namespace SerialCom {
 
         state.measurements[state.measurementIdx] = pm25;
         state.measurementIdx = (state.measurementIdx + 1) % 5;
-        Serial.println(state.measurements[0] + " measurement 0");
         if (state.measurementIdx == 0) {
             float avgPM25 = 0.0f;
             for (uint8_t i = 0; i < 5; ++i) {
@@ -61,7 +59,6 @@ namespace SerialCom {
         }
         while (Serial2.available()) {
             serialRxBuf[rxBufIdx++] = Serial2.read();
-            // Serial.println(serialRxBuf[rxBufIdx]);
             delay(15);
             if (rxBufIdx >= 64) {
                 clearRxBuf();
