@@ -10,6 +10,7 @@
             "includePath": [
                 "c:/Users/Stephan/OneDrive - HTL Neufelden/Labor/4AHWII/Projekt - SenseOfWellbeing/vindrik1/vindrik_1/include",
                 "c:/Users/Stephan/OneDrive - HTL Neufelden/Labor/4AHWII/Projekt - SenseOfWellbeing/vindrik1/vindrik_1/src",
+                "c:/Users/Stephan/OneDrive - HTL Neufelden/Labor/4AHWII/Projekt - SenseOfWellbeing/vindrik1/vindrik_1/.pio/libdeps/esp32dev/PubSubClient/src",
                 "c:/Users/Stephan/OneDrive - HTL Neufelden/Labor/4AHWII/Projekt - SenseOfWellbeing/vindrik1/vindrik_1/.pio/libdeps/esp32dev/ESP8266 and ESP32 OLED driver for SSD1306 displays/src",
                 "C:/Users/Stephan/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                 "c:/Users/Stephan/OneDrive - HTL Neufelden/Labor/4AHWII/Projekt - SenseOfWellbeing/vindrik1/vindrik_1/.pio/libdeps/esp32dev/EspSoftwareSerial/src",
@@ -222,6 +223,7 @@
                 "path": [
                     "c:/Users/Stephan/OneDrive - HTL Neufelden/Labor/4AHWII/Projekt - SenseOfWellbeing/vindrik1/vindrik_1/include",
                     "c:/Users/Stephan/OneDrive - HTL Neufelden/Labor/4AHWII/Projekt - SenseOfWellbeing/vindrik1/vindrik_1/src",
+                    "c:/Users/Stephan/OneDrive - HTL Neufelden/Labor/4AHWII/Projekt - SenseOfWellbeing/vindrik1/vindrik_1/.pio/libdeps/esp32dev/PubSubClient/src",
                     "c:/Users/Stephan/OneDrive - HTL Neufelden/Labor/4AHWII/Projekt - SenseOfWellbeing/vindrik1/vindrik_1/.pio/libdeps/esp32dev/ESP8266 and ESP32 OLED driver for SSD1306 displays/src",
                     "C:/Users/Stephan/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                     "c:/Users/Stephan/OneDrive - HTL Neufelden/Labor/4AHWII/Projekt - SenseOfWellbeing/vindrik1/vindrik_1/.pio/libdeps/esp32dev/EspSoftwareSerial/src",
