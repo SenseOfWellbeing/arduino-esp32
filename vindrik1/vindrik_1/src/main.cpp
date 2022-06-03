@@ -32,7 +32,7 @@ void loop() {
   SerialCom::handleUart(state);
   // if(lmillis() - nextReport >= 0){
       // nextReport = lmillis() + REPORT_DELAY; //* 1000;
-        delay(100);
+        delay(1000);
       // if(state.valid){
         Serial.println("Wert: " + state.avgPM25);
       // }

@@ -8,14 +8,17 @@
 #include "Types.h"
 
 namespace SerialCom {
-    constexpr static const uint8_t PIN_UART_RX = 0; // GPIO 3
-    constexpr static const uint8_t PIN_UART_TX = 23; // UNUSED
+    constexpr static const uint8_t PIN_UART_RX = GPIO_PIN_REG_3; // GPIO 3
+    constexpr static const uint8_t PIN_UART_TX = GPIO_PIN_REG_1; // UNUSED
 
     uint8_t serialRxBuf[255];
     uint8_t rxBufIdx = 0;
 
     void setup() {
+        pinMode(PIN_UART_RX, INPUT);
+        pinMode(PIN_UART_TX, INPUT);
         Serial2.begin(115200, SERIAL_8N1, PIN_UART_RX, PIN_UART_TX);
+        // Serial2.begin(115200, SERIAL_8N1,)
     }
 
     void clearRxBuf() {
