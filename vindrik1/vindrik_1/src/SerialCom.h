@@ -1,8 +1,4 @@
 #include <SoftwareSerial.h>
-
-#include <SSD1306.h>
-// #include <splash.h>
-#include <SoftwareSerial.h>
 #include "Types.h"
 
 namespace SerialCom {
